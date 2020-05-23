@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageId>PoolingHttpClient</PackageId>
+    <Version>1.0.0</Version>
+    <AssemblyVersion>1.0.0</AssemblyVersion>
+    <Title>PoolingHttpClient</Title>
+    <RepositoryUrl>https://github.com/berkaroad/PoolingHttpClient.git</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/berkaroad/PoolingHttpClient</PackageProjectUrl>
+    <Authors>Jerry Bai</Authors>
+    <PackageTags>httpclient http pool</PackageTags>
+    <Description>Pooling HttpClient</Description>
+    <Summary>Pooling HttpClient</Summary>
+    <PackageReleaseNotes>https://github.com/berkaroad/PoolingHttpClient</PackageReleaseNotes>
+    <RepositoryType>git</RepositoryType>
+  </PropertyGroup>
+
+</Project>
