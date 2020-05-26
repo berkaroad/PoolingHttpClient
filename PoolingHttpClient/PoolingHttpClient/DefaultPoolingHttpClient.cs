@@ -16,7 +16,6 @@ namespace PoolingHttpClient
         private ConcurrentDictionary<string, HttpClientConnectionPool> _poolDict = new ConcurrentDictionary<string, HttpClientConnectionPool>();
         private Dictionary<string, int> _connectionLimitDict = new Dictionary<string, int>();
         private volatile int _isDisposed = 0;
-
         private Timer cleanIdleHttpClientTimer;
 
         /// <summary>

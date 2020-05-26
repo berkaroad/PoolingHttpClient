@@ -85,8 +85,10 @@ Thread.Sleep(5000);
 
 ## Publish History
 
+### 1.0.1
+1）Optimize cleaning idle connection.
+
 ### 1.0.0
+1）Limit connection per host.
 
-- 1）Limit connection per host.
-
-- 2）Support auto clean idle connection.
+2）Support auto clean idle connection.

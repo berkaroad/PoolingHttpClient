@@ -93,13 +93,13 @@ namespace PoolingHttpClient
         /// </summary>
         public void CleanIdleHttpClient()
         {
-            foreach (var clientTuple in _pool.ToArray())
+            if (_pool.TryPeek(out Tuple<long, HttpClient> item))
             {
-                // Idle time
-                if (clientTuple.Item1 + _maxIdleTicks < DateTime.Now.Ticks)
+                if (item.Item1 + _maxIdleTicks < DateTime.Now.Ticks)
                 {
-                    if (_pool.TryDequeue(out Tuple<long, HttpClient> _))
+                    if (_pool.TryDequeue(out Tuple<long, HttpClient> removedItem))
                     {
+                        removedItem.Item2.Dispose();
                         Interlocked.Decrement(ref _poolSize);
                         if (DebugEnabled)
                         {
